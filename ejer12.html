@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        th {
+            font-weight: bold;
+            background-color: rgb(221, 219, 219);
+            text-align: left;
+        }
+        h3 {
+            text-align: center;
+        }
+        #t01.hover {
+            background-color:greenyellow;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<body>
+    <h3>Invoice</h3>
+    <table border="2px"; align="center">
+        <tr>
+            <th>Item/Desc.</th>
+            <th>Qty.</th>
+            <th>@</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Paperclips</td>
+            <td>100</td>
+            <td>1.15</td>
+            <td>115.00</td>
+        </tr>
+        <tr>
+            <td>Paper (case)</td>
+            <td>10</td>
+            <td>45.99</td>
+            <td>459.90</td>
+        </tr>
+        <tr>
+            <td id = "t01">Wastepaper <br/> Baskets</td>
+            <td>2</td>
+            <td>17.99</td>
+            <td>35.98</td>
+        </tr>
+        <tr>
+            <th colspan="3";>Subtotal</th>
+            <td>610.88</td>
+        </tr>
+        <tr>
+            <th colspan="2">Tax</th>
+            <td>7%</td>
+            <td>42.76</td>
+        </tr>
+        <tr>
+            <th colspan="3">Total</th>
+            <td>653.64</td>
+        </tr>
+    </table>
+</body>
+</html>

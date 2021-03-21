@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Nombre:</label>
+        <br/>
+        <input type="text" name="nombre"/>
+        <br/>
+        <br/>
+        <label>Correo electrónico:</label>
+        <br/>
+        <input type="email" name="correo"/>
+        <br/>
+        <br/>
+        <label>URL:</label>
+        <br/>
+        <input type="url" name="url" placeholder="Escribe la URL"/>
+        <br/>
+        <br/>
+        <label>Tiempo:</label>
+        <br/>
+        <input type="time" name="tiempo" max="60" min="0"/>
+        <br/>
+        <br/>
+        <label>Fecha y hora de nacimiento:</label>
+        <br/>
+        <input type="date" name="fecha"/>
+        <input type="time" name="hora"/>
+        <br/>
+        <br/>
+        <label>Mes:</label>
+        <br/>
+        <input type="month" name="mes"/>
+        <br/>
+        <br/>
+        <label>Semana:</label>
+        <br/>
+        <input type="week" name="semana"/>
+        <br/>
+        <br/>
+        <label>Número (mínimo -10, max 10):</label>
+        <br/>
+        <input type="number" name="numero" max="10" min="-10" placeholder="0"/>
+        <br/>
+        <br/>
+        <label>Intervalo (mínimo 0, max 10):</label>
+        <br/>
+        <input type="range" name="intervalo" max="10" min="0" list="marcas"/>
+        <datalist id="marcas">
+            <option value="0">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+            <option value="5">
+            <option value="6">
+            <option value="7">
+            <option value="8">
+            <option value="9">
+            <option value="10">
+          </datalist>
+        <br/>
+        <br/>
+        <label>Teléfono:</label>
+        <br/>
+        <input type="tel" name="telefono"/>
+        <br/>
+        <br/>
+        <label>Término de búsqueda:</label>
+        <br/>
+        <input type="search" name="busqueda"/>
+        <br/>
+        <br/>
+        <label>Color favorito:</label>
+        <br/>
+        <input type="color" name="color"/>
+        <br/>
+        <br/>
+        <input type="submit" value="Submit!" name="enviar"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+html {
+    background-color: #b5b5b5;
+}
+body {
+    color: rgb(116, 188, 197);
+}
+p {
+    color: red;
+    text-align: center;
+}
+header {
+    text-align: right;
+    color: green;
+}
+#id1 {
+    font-size: 200%;
+}
+.prueba {
+    font-size: 150%;
+    margin: 25%;
+}
+p.prueba {
+    font-size: 300%;
+}

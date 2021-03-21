@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formulario1" method="post" action="principal.html">
+        <fieldset>
+            <legend>Formulario</legend>
+            <label>Tipo de documento:</label>
+        <br/>
+        <select>
+            <option>CIF</option>
+            <option>DNI</option>
+            <option>NIF</option>
+        </select>
+        <br/>
+        <br/>
+        <label>Nombre:</label>
+        <br/>
+        <input type="text" name="nombre"/>
+        <br/>
+        <br/>
+        <label>Apellidos:</label>
+        <br/>
+        <input type="text" name="apellidos"/>
+        <br/>
+        <br/>
+        <label>Género:</label>
+        <br/>
+        <input name="genero" type="radio"/>
+        <label>Masculino</label>
+        <br/>
+        <input name="genero" type="radio"/>
+        <label>Femenino</label>
+        <br/>
+        <br/>
+        <label>Fecha de nacimiento:</label>
+        <br/>
+        <input type="date" name="fecha"/>
+        <br/>
+        <br/>
+        <label>Edad:</label>
+        <br/>
+        <input type="number" min="0" max="120" name="edad"/>
+        <br/>
+        <br/>
+        <label>Años de experiencia:</label>
+        <br/>
+        <i>de 0 a 50 años</i>
+        <br/>
+        <input type="range" min="0" max="50" name="añosexperiencia"/>
+        <br/>
+        <br/>
+        <label>Descripción:</label>
+        <br/>
+        <textarea></textarea>
+        <br/>
+        <br/>
+        <input type="submit" value="Cargar información" name="descripcion"/>
+        </fieldset>
+    </form>
+</body>
+</html>

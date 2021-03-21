@@ -1,0 +1,24 @@
+html {
+    background-color: khaki;
+    background-image: url('https://payload.cargocollective.com/1/20/647346/14193211/TFG-Arquitectura_Thumbnail_1000.png');
+    background-repeat: no-repeat;
+    background-position-x: 100px;
+    background-position-y: 100px;
+}
+h1 {
+    background-color: green;
+}
+#art2 {
+    background-color: mediumblue;
+    opacity: 0.5;
+}
+p {
+    border-style: solid;
+}
+p.doble {
+    border-style: double;
+    border-width: 15px 20px 45px 35px; /* arriba derecha abajo izquierda */
+    border-left-style: navy;
+    border-left-color: mediumvioletred;
+    border-left-style: solid;
+}

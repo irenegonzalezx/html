@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(196, 196, 196);
+}
+h1 {
+    color:rgba(255, 0, 119, 0.993)
+}
+fieldset {
+    border-color: rgb(0, 162, 255);
+    border-width: 3px;
+}
+
+label {
+    font-size: 20px;
+    color: blue;
+}

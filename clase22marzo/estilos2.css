@@ -1,0 +1,50 @@
+#caja1 {
+    background-color:rgb(166, 217, 226);
+    padding: 25px;
+    margin: 100px;
+    width: 200px;
+}
+
+#caja2 {
+    background-color:rgb(166, 217, 226);
+    padding: 25px;
+    margin: 100px;
+    width: 500px;
+}
+
+img.arriba{
+    vertical-align: top;
+}
+
+img.centro{
+    vertical-align: middle;
+}
+
+h1 {
+    text-decoration: overline;
+    text-transform: lowercase;
+    text-shadow: 2px 2px blue;
+}
+
+h2 {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+h3 {
+    text-decoration: line-through;
+    text-transform: capitalize;
+} 
+
+
+/* Para centrar un div en la página:
+
+div {
+    background-color:rgb(166, 217, 226);
+    padding: 25px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+} */

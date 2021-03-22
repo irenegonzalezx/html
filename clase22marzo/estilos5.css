@@ -1,0 +1,46 @@
+body {
+    background-color: lightgray;
+}
+.sombra2 {
+    color: white;
+    text-shadow: 3px 3px 9px rgb(155, 27, 27),
+    0.5px 0.5px 0px black,
+    -0.5px -0.5px 0px black;
+}
+
+.sombra3 {
+    text-shadow: -5px -5px 5px rgb(155, 27, 27),
+    4px -3px 5px green,
+    4px 4px 5px blue;
+}
+
+.sombra4 {
+    background-color: lightgray;
+    color: white;
+    text-shadow: 1px 1px 0px grey,
+    -1px -1px 0px grey;
+}
+
+.sombra5 {
+    background-color: rgb(97, 96, 96);
+    color: rgb(131, 131, 131);
+    text-shadow: -1px -1px 0px white;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text
+}
+
+.sombra6 {
+    background-color: #8a8888;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+         background-clip: text;
+}
+
+#apartado1 {
+font-family: Arial;
+font-size: 30px;
+text-shadow: 10px 10px 5px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Mi primer ejemplo de JavaScript y Bootstrap</h1>
+        <div class="row">
+            <div class="col-sm-6" style="background-color: rgb(123, 255, 47);">Primer columna</div>
+            <div class="col-sm-6" id="columna2">Poner nombre y apellidos</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="background-color: cyan;">Mis Datos personales</div>
+            <div class="col-sm-8">
+                <table class="table table-info table-hover table-striped">
+                    <tr>
+                        <th>
+                            Nombre
+                        </th>
+                        <th>
+                            Apellidos
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Alberto
+                        </td>
+                        <td>
+                            Rodriguez
+                        </td>
+                    <tr>
+                        <td id="nombre1">
+                            Nombre
+                        </td>
+                        <td id="apellido1">
+                            Apellidos
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Pedro
+                        </td>
+                        <td>
+                            Romero
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="row" style="background-color: lightgray;">
+            <div class="col">
+                <h2>Formulario de entrada</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="nombreform" id="form-label">Nombre*</label>
+                        <input class="form-control" type="text" id="nombreform"
+                            placeholder="Introduzca el nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" id="form-label">Contraseña*</label>
+                        <input type="password" id="password" class="form-control"
+                            placeholder="Introduzca la contraseña">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                ¿Está de acuerdo?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-danger" value="ACEPTAR" onclick="procesar()">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script src="js/funciones.js"></script>
+</body>
+
+</html>

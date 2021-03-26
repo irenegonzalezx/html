@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Informática</li>
+        <li>Matemáticas</li>
+        <li>Ciencia</li>
+    </ul>
+
+    <button onclick="cambiar()">Cambiar de Matemáticas a Lengua</button>
+    <button onclick="cambio()">Cambiar de Matemáticas a Lengua 1</button>
+
+    <script>
+        function cambiar () {
+            var tabla = document.getElementsByTagName("li")
+            tabla[1].innerHTML = "Lengua"
+        }
+    </script>
+
+    <script>
+        function cambio(){
+        var mates = document.getElementsByTagName("li")
+
+        for(i in mates){
+
+            if(mates[i].innerHTML == "Matemáticas"){
+
+                mates[i].innerHTML = "Lengua"
+            }
+        }
+    }
+
+    </script>
+</body>
+</html>

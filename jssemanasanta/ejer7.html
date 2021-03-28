@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array de CADENAS</title>
+
+</head>
+
+<body>
+    <div id="div1">
+    </div>
+    <input type="button" value="Añadir párrafo" onclick="poner_parrafo()" />
+    <input type="button" value="Borrar párrafo" onclick="quitar_parrafo()" />
+
+    <script>
+        var contador = 0
+        function poner_parrafo() {
+
+            var parrafo = document.createElement("p")
+            var texto = document.createTextNode("Párrafo número " + contador)
+            parrafo.appendChild(texto)
+            parrafo.className = "parrafo"
+            var x = document.getElementById("div1")
+            x.appendChild(parrafo)
+            contador++
+        }
+
+        function quitar_parrafo() {
+            var parrafos = document.getElementsByClassName("parrafo");
+
+            if (parrafos.length > 0) { //Si hay nodos que se puedan eliminar
+                var eliminarparrafo = parrafos[parrafos.length - 1]; //Acceso al último nodo hijo
+                eliminarparrafo.parentNode.removeChild(eliminarparrafo);
+                contador = contador - 1;
+            }
+            else {
+                document.getElementById("div1").innerHTML = "No hay más parrafos que borrar."
+            }
+        }
+    </script>
+
+</body>
+
+</html>

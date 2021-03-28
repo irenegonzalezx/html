@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var texto = prompt("Escribe un texto:");
+        var caracter = prompt("Escribe un caracter:");
+        var encontrado = false;
+
+        for (var i = 0; i < texto.length; i++) {
+            if (texto.charAt(i) == caracter) {
+                document.write("El caracter está en la posición " + (i + 1) + ".");
+                encontrado = true;
+                break;
+            }
+        }
+        if (encontrado == false) {
+            document.write("El caracter no está en la cadena.");
+        }
+
+    </script>
+</body>
+</html>

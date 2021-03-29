@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación/Contabilidad</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-dark navbar-expand-lg" style="background-color: rgb(136, 92, 124);">
+            <a class="navbar-brand" href="#"><i class="bi bi-grid-3x3-gap-fill"></i></a>
+            <a class="navbar-brand" href="#" style="margin-right: 60px;">Facturación/Contabilidad</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Proveedores</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Informes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="bi bi-chat-fill"></i><span
+                                class="notification-badge badge badge-info">1</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-clock"></i></a></li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown"><i class="bi bi-tools"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Herramientas</a>
+                            <a class="dropdown-item" href="#">Otros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i>
+                            Apasoft</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <span class="grey title">Facturas</span>
+                </div>
+                <div class="col-lg border-bottom secondary">
+                    <div class="input-group input-group-unstyled">
+                        <input type="text" class="form-control" placeholder="Buscar..." style="border:none;">
+                        <span class="input-group-addon">
+                            <i class="bi bi-search" style="color:rgb(99, 99, 99); font-weight: bold;"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row justify-content-between" style="margin-top: 15px;">
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-info text" style="border-radius: 0px; margin-right: 8px;">CREAR</button>
+                    <a class="text" id="cargar">CARGAR</a>
+                </div>
+                <div class="col-3" style="margin-bottom: 20px;">
+                    <span class="darkgrey text" style="margin-right: 20px;"><i class="bi bi-funnel-fill"></i>
+                        Filtros</span>
+                    <span class="darkgrey text" style="margin-right: 20px;"><i class="bi bi-list"
+                            style="font-weight: border;"></i> Agrupar por</span>
+                    <span class="darkgrey text"><i class="bi bi-star-fill"></i> Favoritos</span>
+                </div>
+                <div class="col text-right" style="margin-bottom: 20px;">
+                    <span class="darkgrey text" style="margin-right: 10px;"><i class="bi bi-list-ul"></i></span>
+                    <span class="darkgrey text"><i class="bi bi-grid-fill"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <table class="table">
+            <tr class="darkgrey text">
+                <th scope="col"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <th scope="col">Número</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Fecha factura</th>
+                <th scope="col">Fecha vencimiento</th>
+                <th scope="col">Actividad siguiente</th>
+                <th scope="col" style="text-align: right;">Impuestos excluidos</th>
+                <th scope="col" style="text-align: right;">Total</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Estado de pago</th>
+                <th scope="col" style="text-align: right;"><i class="bi bi-three-dots-vertical"></i></th>
+            </tr>
+            <tr class="grey" style="font-size: 10pt;">
+                <th scope="row"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <td class="text">REF001</td>
+                <td></td>
+                <td>13/04/2021</td>
+                <td></td>
+                <td><i class="bi bi-clock" style="margin-right: 8px; color: orange;"></i>Volutpat Blandit</td>
+                <td style="text-align: right;">16.745,00 €</td>
+                <td class="text" style="text-align: right;">51.759,00 €</td>
+                <td><span class="badge badge-info text">Borrador</span></td>
+                <td><span class="badge badge-success text">Pagado</span></td>
+                <td></td>
+            </tr>
+            <tr class="grey" style="font-size: 10pt;">
+                <th scope="row"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <td class="text">REF002</td>
+                <td></td>
+                <td>01/04/2021</td>
+                <td class="text" style="color: red;">10 days ago</td>
+                <td><i class="bi bi-clock" style="margin-right: 8px; color: red;"></i>Viverra nam</td>
+                <td style="text-align: right;">45.250,00 €</td>
+                <td class="text" style="text-align: right;">94.924,00 €</td>
+                <td><span class="badge badge-info text">Borrador</span></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="grey" style="font-size: 10pt;">
+                <th scope="row"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <td class="text">REF003</td>
+                <td></td>
+                <td>17/03/2021</td>
+                <td></td>
+                <td><i class="bi bi-clock" style="margin-right: 8px; color: green;"></i>Integer vitae</td>
+                <td style="text-align: right;">88.323,00 €</td>
+                <td class="text" style="text-align: right;">13.689,00 €</td>
+                <td><span class="badge badge-success text">Publicado</span></td>
+                <td><span class="badge badge-warning text">En proceso de pago</span></td>
+                <td></td>
+            </tr>
+            <tr class="grey" style="font-size: 10pt;">
+                <th scope="row"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <td class="text">REF004</td>
+                <td></td>
+                <td>05/04/2021</td>
+                <td class="text">In 11 days</td>
+                <td><i class="bi bi-clock" style="margin-right: 8px; color: orange;"></i>Viverra nam</td>
+                <td style="text-align: right;">74.680,00 €</td>
+                <td class="text" style="text-align: right;">33.358,00 €</td>
+                <td><span class="badge badge-info text">Borrador</span></td>
+                <td><span class="badge badge-warning text">Pagado parcialmente</span></td>
+                <td></td>
+            </tr>
+            <tr class="grey" style="font-size: 10pt;">
+                <th scope="row"><input type="checkbox" name="checkbox" id="checkbox"></th>
+                <td class="text">REF005</td>
+                <td></td>
+                <td>03/02/2021</td>
+                <td></td>
+                <td><i class="bi bi-clock" style="margin-right: 8px; color: green;"></i>Integer vitae</td>
+                <td style="text-align: right;">67.296,00 €</td>
+                <td class="text" style="text-align: right;">77.039,00 €</td>
+                <td><span class="badge badge-secondary text">Cancelado</span></td>
+                <td><span class="badge badge-success text">Pagado</span></td>
+                <td></td
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>

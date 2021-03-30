@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
+.inicio {
+    background: linear-gradient(to right, #8e818a, #9b888e, #ab949a);
+}
+
 .grey {
     color: grey;
     
@@ -50,6 +54,12 @@ button.text {
   
 }
 
+.titleapp {
+    font-size: 11pt;
+    color: white;
+    text-shadow: 1px 1px grey;
+}
+
 .form-control:focus{
     border-color: #cccccc;
     -webkit-box-shadow: none;
@@ -93,3 +103,11 @@ span.notification-badge {
     font-weight: bold!important; 
     position:relative!important;
  }
+
+ .img-responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+ 

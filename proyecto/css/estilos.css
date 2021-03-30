@@ -7,6 +7,11 @@ body {
     
 }
 
+.lightgrey {
+    color: lightgrey;
+    
+}
+
 .darkgrey {
     color:rgb(99, 99, 99)
 }
@@ -38,6 +43,13 @@ button.text {
   
 }
 
+.whitetitle {
+    font-size: 11pt;
+    color: white;
+    padding: 7px;
+  
+}
+
 .form-control:focus{
     border-color: #cccccc;
     -webkit-box-shadow: none;
@@ -46,9 +58,9 @@ button.text {
 
 span.notification-badge {
     position: relative;
-    top: -10px;
+    top: -9px;
     right: 5px;
-    margin-right: -10px;
+    margin-right: -8px;
   }
 
   .input-group.input-group-unstyled input.form-control {
@@ -61,3 +73,23 @@ span.notification-badge {
     border: 0px;
     background-color: transparent;
 }
+
+::-webkit-input-placeholder {
+    font-size: 10pt!important;
+    color: lightgrey!important;
+    font-weight: bold!important;
+    position:relative!important;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    font-size: 10pt!important;
+    color: lightgrey!important;
+    font-weight: bold!important;
+    position:relative!important;
+ }
+ ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 10pt!important;
+    color: lightgrey!important;
+    font-weight: bold!important; 
+    position:relative!important;
+ }

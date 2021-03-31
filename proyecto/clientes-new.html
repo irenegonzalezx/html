@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes / New</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/958dd69cd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-dark navbar-expand-lg" style="background-color: rgb(136, 92, 124);">
+            <a class="navbar-brand" href="#"><i class="bi bi-grid-3x3-gap-fill"></i></a>
+            <a class="navbar-brand" href="#" style="margin-right: 60px;">Ventas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown">Pedidos</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Presupuestos</a>
+                            <a class="dropdown-item" href="#">Pedidos</a>
+                            <a class="dropdown-item" href="#">Equipos de ventas</a>
+                            <a class="dropdown-item" href="#">Clientes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">A facturar</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Informes</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Configuración</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fas fa-comments"></i><span
+                                class="notification-badge badge badge-info">1</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-clock"></i></a></li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown"><i class="bi bi-tools"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">Herramientas</a>
+                            <a class="dropdown-item" href="#">Otros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i>
+                            Apasoft</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <span id="cargar" class="title">Clientes </span>
+                    <span class="grey title">/ New</span>
+                </div>
+                <div class="col-lg">
+                </div>
+
+            </div>
+            <div class="row justify-content-between border-bottom secondary" style="margin-top: 30px;">
+                <div class="col-lg-6" style="margin-bottom: 10px;">
+                    <button type="button" class="btn btn-info text"
+                        style="border-radius: 0px; margin-right: 8px;">GUARDAR</button>
+                    <a class="text" id="cargar">DESCARTAR</a>
+                </div>
+                <div class="col-3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: rgb(231, 231, 231);">
+        <div class="container-fluid">
+            <div class="row justify-content-center" style="padding: 15px;">
+                <div class="col-sm-12 border secondary" style="background-color: white;">
+                    <div class="row border-bottom secondary justify-content-end">
+                        <div class="col-1 border-left secondary">
+                            <div class="row" style="padding: 2px;">
+                                <div class="col-4" style="margin-top: 5px;"><i
+                                        class="fas fa-dollar-sign iconcliente"></i></div>
+                                <div class="col-2">
+                                    <div class="row"><span class="smalltext" style="color: rgb(136, 92, 124);">0</span>
+                                    </div>
+                                    <div class="row"><span class="grey smalltext">Ventas</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 border-left secondary">
+                            <div class="row" style="padding: 2px;">
+                                <div class="col-5" style="margin-top: 5px;"><i class="fas fa-edit iconcliente"></i>
+                                </div>
+                                <div class="col-2">
+                                    <div class="row"><span class="smalltext"
+                                            style="color: rgb(136, 92, 124);">0,00</span></div>
+                                    <div class="row"><span class="lightgrey smalltext">Facturado</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 20px; margin-top: 20px;">
+                        <div class="col-3">
+                            <div class="row">
+                                <span class="text darkgrey"><input type="radio" name="ind" id="ind"> Individual</span>
+                                <span class="text darkgrey" style="margin-left: 20px;"><input type="radio" name="ind"
+                                        id="ind"> Compañía</span>
+                            </div>
+                            <div class="row border-bottom" style="margin-top: 20px;">
+                                <input type="text" class="nombreph" placeholder="Nombre"
+                                    style="border:none; width: 290px; padding-bottom: 8px;">
+                            </div>
+                        </div>
+                        <div class="col" style="margin-right: 25px;">
+                            <div class="col-1 ml-auto"><i class="fas fa-camera fa-5x border secondary lightgrey"
+                                    style="padding:5px;"></i></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" style="margin-left: 8px; margin-top: 20px;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Company Address</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="text" placeholder="Calle..."
+                                        style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Teléfono</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="tel" style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" style="margin-left: 8px; margin-top: 5px;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text"></label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="text" placeholder="Calle 2..."
+                                        style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Móvil</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="tel" style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" style="margin-left: 8px; margin-top: 5px;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text"></label>
+                                </div>
+                                <div class="col-2 border-bottom" style="margin-right: 60px;">
+                                    <input type="text" placeholder="Ciudad"
+                                        style="border:none; width: 100px; padding-bottom: 8px;">
+                                </div>
+                                <div class="col-2 border-bottom" style="margin-right: 65px;">
+                                    <select type="text" class="selectpicker lightgrey text"
+                                        style="border:none; width: 100px; padding-bottom: 8px;">
+                                        <option value="1" hidden selected class="grey text">Provincia</option>
+                                        <option value="2" class="grey text">Madrid</option>
+                                        <option value="3" class="grey text">Guadalajara</option>
+                                        <option value="4" class="grey text">Cuenca</option>
+                                        <option value="5" class="grey text">Segovia</option>
+                                        <option value="6" class="grey text">Barcelona</option>
+                                        <option value="7" class="grey text">Valencia</option>
+                                        <option value="8" class="grey text">Alicante</option>
+                                        <option value="9" class="grey text">Gerona</option>
+                                        <option value="10" class="grey text">Burgos</option>
+                                        <option value="11" class="grey text">Cáceres</option>
+                                        <option value="12" class="grey text">Zaragoza</option>
+                                        <option value="13" class="grey text">Lérida</option>
+                                        <option value="14" class="grey text">Soria</option>
+                                        <option value="15" class="grey text">Cantabria</option>
+                                        <option value="16" class="grey text">Asturias</option>
+                                        <option value="17" class="grey text">Otra provincia</option>
+                                    </select>
+                                </div>
+                                <div class="col-2 border-bottom">
+                                    <input type="text" placeholder="C.P."
+                                        style="border:none; width: 80px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Correo electrónico</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="email" style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" style="margin-left: 8px; margin-top: 5px;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text"></label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <select type="text" class="selectpicker lightgrey text"
+                                        style="border:none; width: 450px; padding-bottom: 8px;">
+                                        <option value="1" hidden selected class="grey text">País</option>
+                                        <option value="2" class="grey text">España</option>
+                                        <option value="3" class="grey text">Portugal</option>
+                                        <option value="4" class="grey text">Francia</option>
+                                        <option value="5" class="grey text">Reino Unido</option>
+                                        <option value="6" class="grey text">Alemania</option>
+                                        <option value="7" class="grey text">Italia</option>
+                                        <option value="8" class="grey text">Otros</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Enlace a página web</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="url" placeholder="e.j. https://www.odoo.com"
+                                        style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between" style="margin-left: 8px; margin-top: 5px;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Nº identif. fiscal (NIF)</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <input type="text" placeholder="Por ejemplo, ESA00000000"
+                                        style="border:none; width: 350px; padding-bottom: 8px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-3">
+                                    <label class="darkgrey text">Categorías</label>
+                                </div>
+                                <div class="col-8 border-bottom">
+                                    <select type="text" class="selectpicker lightgrey text"
+                                        style="border:none; width: 450px; padding-bottom: 8px;">
+                                        <option value="1" hidden selected class="grey text">Etiquetas</option>
+                                        <option value="2" class="grey text">Sí</option>
+                                        <option value="3" class="grey text">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border-bottom secondary justify-content-start" style="margin-top:40px;">
+                        <ul class="nav nav-tabs" style="margin-left:30px;">
+                            <li class="nav-item">
+                                <a class="nav-link active darkgrey text" aria-current="page" href="#">Contactos y
+                                    direcciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active darkgrey text" href="#">Venta y compra</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active darkgrey text" href="#">Facturación/Contabilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active darkgrey text" href="#" tabindex="-1"
+                                    aria-disabled="true">Notas internas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-between" style="margin: 30px;">
+                        <div class="col-lg-6" style="margin-bottom: 10px;">
+                            <a class="text" id="cargar">AÑADIR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -29,6 +29,16 @@ body {
     font-weight: bold;
 }
 
+.smalltext {
+    font-size: 9pt;
+    font-weight: bold;
+}
+
+.iconcliente {
+    color: grey;
+    font-size: 17pt;
+}
+
 button.text {
     padding-left: 20px;
     padding-right: 20px;
@@ -104,10 +114,33 @@ span.notification-badge {
     position:relative!important;
  }
 
+ .nombreph::-webkit-input-placeholder {
+    font-size: 20pt!important;
+    color: lightgrey!important;
+    font-weight: normal!important; 
+    position:relative!important;
+ }
+ 
+ .nombreph:-moz-placeholder { /* Firefox 18- */
+    font-size: 20pt!important;
+    color: lightgrey!important;
+    font-weight: normal!important; 
+    position:relative!important;
+ }
+ .nombreph::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 20pt!important;
+    color: lightgrey!important;
+    font-weight: normal!important; 
+    position:relative!important;
+ }
+
  .img-responsive {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
- 
+
+textarea:focus, input:focus, select:focus{
+    outline: none;
+}

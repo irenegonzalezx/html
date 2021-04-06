@@ -13,7 +13,7 @@
     <input type="button" value="Borrar párrafo" onclick="quitar_parrafo()" />
 
     <script>
-        var contador = 0
+        var contador = 1
         function poner_parrafo() {
 
             var parrafo = document.createElement("p")
@@ -34,7 +34,7 @@
                 contador = contador - 1;
             }
             else {
-                document.getElementById("div1").innerHTML = "No hay más parrafos que borrar."
+                alert("No hay más parrafos que borrar.");
             }
         }
     </script>

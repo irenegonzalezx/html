@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eventos</title>
+</head>
+
+<body>
+    <div id="contenidos" style="width:150px; height:60px; background: red" ;
+        onmouseover="document.getElementById('contenidos').style.background='green';"
+        onmouseout="document.getElementById('contenidos').style.background='red';" ondblclick="cambiar(this)">Ejemplo de
+        eventos</div>
+        <div id="contenidos1" style="width:150px; height:60px; background: red" ;
+        onmouseover="document.getElementById('contenidos').style.background='green';"
+        onmouseout="document.getElementById('contenidos').style.background='red';" ondblclick="cambiar(this)">Ejemplo de
+        eventos</div>
+        <p id="parrafo" style="width:150px; height:60px; background: red" ;
+        onmouseover="document.getElementById('contenidos').style.background='green';"
+        onmouseout="document.getElementById('contenidos').style.background='red';" ondblclick="cambiar(this)">Ejemplo de
+        eventos</p>
+</body>
+<script>
+    function cambiar(obj) {
+        obj.style.background = "yellow";
+    }
+</script>
+
+</html>

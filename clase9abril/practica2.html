@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hola</p>
+    <a name="ejer1">Ejercicio 1</a>
+    <a name="ejer2">Ejercicio 2</a>
+    <a name="ejer3">Ejercicio 3</a>
+    <p>Adiós</p>
+    <div>
+        <button id="b1">Contar A</button>
+        <button id="b2">Pintar el segundo A</button>
+        <button id="b3">Pintar contenido al revés</button>
+    </div>
+    <br>
+    <div id="funciones">
+
+    </div>
+</body>
+<script>
+    document.getElementById("b1").addEventListener("click",contar)
+    document.getElementById("b2").addEventListener("click",pintar)
+    document.getElementById("b3").addEventListener("click",reverso)
+
+    function contar() {
+        var a = document.getElementsByTagName("a")
+        contador = a.length
+        document.getElementById("funciones").innerHTML = "Hay " + contador + " a en el documento."
+    }
+
+    function pintar() {
+        var a = document.getElementsByTagName("a")
+        document.getElementById("funciones").innerHTML = "El contenido es: " + (a[1].innerHTML)
+    }
+
+    function reverso() {
+        var a = document.getElementsByTagName("a")
+        var resultado =  document.getElementById("funciones")
+        
+        for (var i = a.length - 1; i >= 0; i--) {
+           resultado.innerHTML = resultado.innerHTML + "<br>" + a[i].innerHTML
+        }
+
+    }
+
+</script>
+</html>

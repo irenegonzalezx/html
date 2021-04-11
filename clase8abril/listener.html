@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h3, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ejemplo de Event Listener</h3>
+    <button id="boton1">Púlsame</button>
+    <p id="p1">Ejemplo de listener</p>
+    <p id="p2" style="background-color: red;">Párrafo rojo</p>
+</body>
+<script>
+    document.getElementById("boton1").addEventListener("click", hola)
+    document.getElementById("p2").addEventListener("dblclick", amarillo)
+    document.getElementById("p2").addEventListener("mouseenter", verde)
+    document.getElementById("p2").addEventListener("mouseout", rojo)
+
+    function hola() {
+        document.getElementById('p1').innerHTML='hola'
+    }
+
+    function amarillo() {
+        document.getElementById('p2').style.backgroundColor = "yellow"
+        document.getElementById('p2').innerHTML= "Párrafo amarillo"
+    }
+
+    function verde() {
+        document.getElementById('p2').style.backgroundColor = "green"
+        document.getElementById('p2').innerHTML= "Párrafo verde"
+    }
+
+    function rojo() {
+        document.getElementById('p2').style.backgroundColor = "red"
+        document.getElementById('p2').innerHTML= "Párrafo rojo"
+    }
+</script>
+</html>

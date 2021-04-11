@@ -1,0 +1,92 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rectangulo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <canvas onmousemove="posicion(event)" id="lienzo" width="400px" height="300px" style="border: 1px solid;"></canvas>
+    <br>
+    <label for="x1">Introduce la coordenada x:</label>
+    <input type="number" id="x1">
+    <br>
+    <label for="y1">Introduce la coordenada y:</label>
+    <input type="number" id="y1">
+    <br>
+    <label for="ancho">Introduce el ancho:</label>
+    <input type="number" id="ancho">
+    <br>
+    <label for="largo">Introduce el largo:</label>
+    <input type="number" id="largo">
+    <br>
+    <br>
+    <button id="boton1">PINTAR RECTANGULO</button>
+    <br>
+    <p id="coordenadas">Coordenadas</p>
+
+
+    <script>
+        //Añadir el listener al botón
+        document.getElementById("boton1").addEventListener('click', pintar_rectangulo)
+
+        //Seleccionamos la canvas
+        var lienzo = document.getElementById("lienzo");
+        //Asignamos el contexto
+        var ctx = lienzo.getContext("2d")
+
+        //Dibujamos el marco
+        ctx.beginPath();
+        ctx.fillText("Esto es una prueba", 100, 100)
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.font= "25px Arial"
+        ctx.fillText("Esto es una prueba", 100, 150)
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.font= "25px Arial"
+        ctx.strokeText("Esto es una prueba", 100, 180)
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.font= "30px Arial"
+        ctx.strokeStyle="green"
+        ctx.strokeText("Esto es una prueba", 100, 210)
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.beginPath()
+        var gradiente = ctx.createLinearGradient(0,0,120,0)
+        gradiente.addColorStop(0,"red")
+        gradiente.addColorStop(1, "yellow")
+        ctx.fillStyle = gradiente
+        ctx.fillRect(10,10,100,100)
+
+        ctx.stroke()
+
+        function pintar_rectangulo() {
+
+            //Recuperar valores de los input:
+            var x1 = document.getElementById("x1").value
+            var y1 = document.getElementById("y1").value
+            var ancho = document.getElementById("ancho").value
+            var largo = document.getElementById("largo").value
+
+            //Seleccionamos la canvas
+            var lienzo = document.getElementById("lienzo");
+            //Asignamos el contexto
+            var ctx = lienzo.getContext("2d")
+            ctx.beginPath()
+            ctx.fillStyle = "red"
+            ctx.fillRect(x1, y1, ancho, largo)
+            ctx.stroke()
+        }
+
+
+    </script>
+
+</body>
+
+</html>

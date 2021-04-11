@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" width="640" src="videoprueba.mp4"  preload="auto">
+    <!--  autoplay -->
+        El navegador no soporta video
+    </video>
+    <div style="background-color: lightgrey; width:640px">
+    <button onclick="comenzar()">></button>
+    <button onclick="parar()" >||</button>
+    <button onclick="volumen_arriba()">+</button>
+    <button onclick="volumen_abajo()" >-</button>
+    <input onchange="cambiar_volumen()" id="rango" type="range" name="volumen" min="0" max="1" step="0.1" value="0.5">
+    <label id="volumen_actual" > Volumen: 50% </label>
+    <br>
+    <h2>VIDEO EN YOUTUBE</h2>
+    <iframe width="640" height="400" src="https://www.youtube.com/embed/eW7Twd85m2g"  ></iframe>
+    </div>
+<script>
+    var video = document.getElementById("video")
+    var barra = document.getElementById("rango")
+    video.volume = 0.5
+       
+   function comenzar(){
+        video.play()
+    }
+
+    function parar(){
+        video.pause()
+
+    }
+
+    function volumen_arriba(){
+        
+        var volumenup = video.volume
+        var volumenup = volumenup + 0.1;
+        video.volume = volumenup
+        barra.value = volumenup
+        
+        document.getElementById("volumen_actual").innerHTML= "Volumen: " + (volumenup * 100) + "%" 
+    }
+
+    function volumen_abajo(){
+        
+        var volumendown = video.volume
+        var volumendown = volumendown - 0.1;
+        video.volume = volumendown
+        barra.value = volumendown
+        
+        document.getElementById("volumen_actual").innerHTML="Volumen: " + (volumendown * 100) +  "%"
+    }
+
+    function cambiar_volumen() {
+
+        video.volume = barra.value
+        document.getElementById("volumen_actual").innerHTML= "Volumen: " + (barra.value * 100) +  "%"
+    }
+
+
+</script>
+</body>
+</html>

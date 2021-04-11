@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="nada.jsp" autocomplete="on" novalidate="novalidate">
+        Nombre: <input type="text" name="fname"></br>
+        Apellidos: <input type="text" name="lname"></br>
+        Correo: <input type="email" name="email" autocomplete="off"></br>
+        URL: <input type="url" name="url"></br>
+        Cantidad: <input type="number"></br>
+        <input type="submit">
+
+        <audio id="audio" controls="controls" src="Track 01.mp3">
+            <source src="sonido.ogg" type="audio/ogg">
+            <source src="Track 01.mp3" type="audio/mp3">
+            En navegador no soporta sonido.
+        </audio>
+        <video id="video" src="videoprueba.mp4" conptrols="controls" preload="auto" width="720">
+            El navegador no soporta vídeo.
+        </video>
+    </form>
+
+    <div id="botones">
+        <input type="button" value="Reproducir Vídeo" onclick="playvideo()">
+        <input type="button" value="Pausar Vídeo" onclick="pausevideo()">
+        <input type="button" value="Reproducir Audio" onclick="playaudio()">
+        <input type="button" value="Pausar Audio" onclick="pauseaudio()">
+    </div>
+
+</body>
+<script>
+    var video = document.getElementById("video")
+    var audio = document.getElementById("audio")
+
+    function playaudio() {
+        audio.play();
+    }
+
+    function pauseaudio() {
+        audio.pause();
+    }
+
+    function playvideo() {
+        video.play();
+    }
+
+    function pausevideo() {
+        video.pause();
+    }
+
+</script>
+
+</html>

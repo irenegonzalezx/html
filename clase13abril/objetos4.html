@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Añadir a cookies</h1>
+        <p class="lead">Introduce las propiedades de la persona</p>
+        <hr class="my-4">
+        <label>Introduce tu nombre</label>
+        <br>
+        <input type="text" id="nombre">
+        <br>
+        <label>Introduce tus apellidos: </label>
+        <br>
+        <input type="text" id="apellidos">
+        <br>
+        <label>Introduce tu edad</label>
+        <br>
+        <input type="number" id="edad">
+        <br>
+        <label>Introduce tu hobby: </label>
+        <br>
+        <input type="text" id="hobby">
+
+        <p class="lead">
+            <br>
+            <a class="btn btn-primary btn-lg" onclick="add_prop()" href="#" role="button">Añadir a cookies</a>
+            <a class="btn btn-primary btn-lg" onclick="show_prop()" href="#" role="button">Ver propiedades</a>
+            <a class="btn btn-primary btn-lg" onclick="show_cookies()" href="#" role="button">Ver cookies</a>
+        </p>
+
+        <p id="p1"></p>
+    </div>
+
+    <script>
+        var persona = {
+            Nombre: "XXXXX",
+            Apellidos: "XXXXX",
+            Edad: "XXXXX",
+            Hobby: "XXXXX",
+
+            ape : function() {
+                return this.Apellidos
+            },
+            
+            f1: function(x) {
+                return this.Nombre + 2 + " " + x
+            }
+        }
+
+        persona.f2 = function(){
+            return "La tercera función"
+        }
+
+        alert("Los apellidos son " + persona.ape())
+        alert("Ejemplo con parámetros" + persona.f1("Hola"))
+        alert(persona.f2())
+
+        function add_prop() {
+
+            persona.Nombre = document.getElementById("nombre").value
+            persona.Apellidos = document.getElementById("apellidos").value
+            persona.Edad = document.getElementById("edad").value
+            persona.Hobby = document.getElementById("hobby").value
+
+            for (i in persona) {
+                document.cookie = i + "=" + persona[i]
+
+            }
+
+        }
+
+        function show_prop() {
+
+            document.getElementById("p1").innerHTML = "Las propiedades de la persona son:"
+            for (i in persona) {
+                document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML + "<br>" + i + ": " + persona[i]
+
+            }
+        }
+
+        function show_cookies() {
+
+            document.getElementById("p1").innerHTML = "Las cookies son: " + "<br>"
+            var array1 = document.cookie.split(";")
+            for (var i in array1) {
+                var array2 = array1[i].split("=")
+                document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML + array2[0] + " : " + array2[1] + "<br>"
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

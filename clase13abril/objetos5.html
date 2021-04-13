@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <script>
+        var curso = {
+            codigo: 10,
+            nombre_curso: "Revit",
+            nombre_profesor: "Francisca Josefa",
+            num_asignaturas: 3,
+            num_alumnos: 5,
+
+            ver_datos: function () {
+                return "curso de " + this.nombre_curso + ", impartido por " + this.nombre_profesor
+            },
+
+            beneficio: function () {
+                return this.num_alumnos * 100
+            }
+        }
+
+        curso.neto = function(iva) {
+            return curso.beneficio() - (curso.beneficio() * iva)
+        }
+
+        document.getElementById("p1").innerHTML = "Datos: " + curso.ver_datos() + "<br>" + "Beneficio: " + curso.beneficio() + "<br>" + "Neto: " + curso.neto(0.21)
+        
+    </script>
+</body>
+
+</html>

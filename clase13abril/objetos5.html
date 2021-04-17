@@ -31,6 +31,11 @@
             return curso.beneficio() - (curso.beneficio() * iva)
         }
 
+        for (i in curso) {
+            
+            document.getElementById("p1").innerHTML = document.getElementById("p1").innerHTML + "<br>" + i + ":" + curso[i]
+        }
+
         document.getElementById("p1").innerHTML = "Datos: " + curso.ver_datos() + "<br>" + "Beneficio: " + curso.beneficio() + "<br>" + "Neto: " + curso.neto(0.21)
         
     </script>
